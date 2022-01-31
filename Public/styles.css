@@ -1,0 +1,98 @@
+body {
+  padding-top: 20px;
+  padding-left: 9vw;
+  padding-right: 9vw;
+  background-color: dimgray;
+  margin-bottom: 0px;
+}
+#main {
+  color: bisque;
+  background-color: rgb(44, 42, 46);
+  height: 90vh;
+  border-radius: 10px;
+}
+#title {
+  height: 15vh;
+  text-align: center;
+  font-size: 500%;
+}
+
+#container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-right: 3em;
+  padding-left: 3em;
+  overflow-y: auto;
+  height: 70vh;
+  justify-items: center;
+}
+.item {
+  align-self: flex-start;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  color: bisque;
+
+  background-color: rgb(44, 42, 46);
+
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  width: 30%;
+  height: 20%;
+  border: 3px solid rgb(44, 42, 46);
+  margin: auto;
+  flex-grow: 1;
+}
+
+.item:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0%;
+  opacity: 0;
+  content: "";
+  background-color: dimgray;
+}
+
+.item:hover {
+  cursor: pointer;
+  border: 3px solid rgb(44, 42, 46);
+}
+.item:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+@media only screen and (max-height: 20em) {
+  #title {
+    font-size: xx-large;
+  }
+  body {
+    padding-top: 0px;
+  }
+  .item {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 60em) {
+  #title {
+    font-size: xx-large;
+  }
+  body {
+    padding-top: 0px;
+  }
+  item {
+    padding: 0px;
+    margin: 0px;
+  }
+}

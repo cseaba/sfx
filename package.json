@@ -1,0 +1,14 @@
+{
+  "name": "sfx",
+  "version": "1.0.0",
+  "description": "A website with funny sound effects to play at school and mess with people",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "author": "Caleb S.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
