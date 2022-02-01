@@ -8,7 +8,7 @@ app.use(express.static("Public"));
 
 
 app.get ('/', (req, res) => {
-    res.sendFile(__dirname + "/public/sfx.html")
+    res.sendFile('/Public/sfx.html', { root: __dirname});
 })
 
 
