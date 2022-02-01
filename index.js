@@ -10,7 +10,7 @@ var options = {
   }
 }
 
-app.use(express.static(__dirname + '/Public/', options);
+app.use(express.static(__dirname + '/Public/', options));
 
 app.get ('/', (req, res) => {
     res.sendFile('/Public/sfx.html', { root: __dirname});
