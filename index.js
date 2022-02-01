@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 
-app.use(express.static("Public"));
+app.use(express.static('Public', { root: __dirname}));
 
 
 app.get ('/', (req, res) => {
