@@ -1,15 +1,13 @@
 //need to use id instead of class, because class responds with a list of elements
 const container = document.getElementById('container');
 
-//need to delete once I finish making the sfx items
+
 const item_count = container.children.length;
-console.log('Item count:', item_count);
 var sound = [];
 for(i = 1;i - 1 < item_count ;i ++ ){
 
    sound[i] = new Audio("/Sounds/" +i+ ".mp3" )
 
-  console.log(sound[i]);
  }
 
 
