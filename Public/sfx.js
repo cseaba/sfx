@@ -1,6 +1,32 @@
 //need to use id instead of class, because class responds with a list of elements
 const container = document.getElementById('container');
 
+window.onload = function(){
+  
+  var s = 83;
+  var p = 80;
+
+    window.onkeydown= function(key){
+      if(key.keyCode === s){
+        for(i = 1;i - 1 < item_count ;i ++ ){
+
+          sound[i].pause();
+          sound[i].currentTime = 0;
+        }
+
+      };
+      if(key.keyCode === p){
+        for(i = 1;i - 1 < item_count ;i ++ ){
+          if(sound[i].currentTime != 0 & sound[i].paused) {
+            sound[i].play();
+          }
+          else if (sound[i].currentTime != 0) {
+            sound[i].pause();
+          }
+        }
+    };
+  };    
+;}
 
 const item_count = container.children.length;
 var sound = [];
@@ -28,7 +54,11 @@ function SoundEffect(name, pos) {
 // plays sound when button is pressed
 function playSound(pos){
 this.pos = pos;
-
+for(i = 1; i-1 < item_count; i ++){
+  if(sound[i].paused & sound[i].currentTime != 0){
+    sound[i].currentTime = 0;
+  }
+}
 this.sfx;
 this.sfx = sound[this.pos];
 this.sfx.play();

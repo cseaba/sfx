@@ -6,7 +6,7 @@ const port = 3000;
 var options = {
 
   setHeaders: function (res, path, stat) {
-    res.set('Cache-Control', 'public, max-age=7200')
+    res.set('Cache-Control', 'public, max-age=600')
   }
 }
 
