@@ -3,10 +3,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+var options = {
 
-app.use(express.static('Public'));
+  setHeaders: function (res, path, stat) {
+    res.set('Cache-Control', 'public, max-age=7200')
+  }
+}
 
- 
+app.use(express.static(__dirname + '/Public/', options));
+
 app.get ('/', (req, res) => {
     res.sendFile('/Public/sfx.html', { root: __dirname});
 })
