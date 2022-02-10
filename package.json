@@ -4,14 +4,19 @@
   "description": "A website with funny sound effects to play at school and mess with people",
   "main": "index.js",
   "scripts": {
-    "test": "run"
+    "start": "nodemon index"
   },
   "author": "Caleb S.",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "handlebars": "^4.7.7",
+    "mongoose": "^6.2.0",
+    "node-fetch": "^3.2.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
   }
 }

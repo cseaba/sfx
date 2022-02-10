@@ -1,0 +1,20 @@
+<h3>{{viewTitle}}</h3>
+
+<form action='/sounds' method="POST" autocomplete='off'>
+
+<input type="hidden" name="_id" value="{{Sounds._id}}">
+<div class="form-group">
+    <label>Sound Name</label>
+    <input type="text" class="form-control" name="soundName"
+     placeholder="Sound Name" value="{{Sounds.soundName}}">
+</div>
+<div class="form-group">
+    <label>First Name</label>
+    <input type="text" class="form-control"
+     name="firstName" placeholder="First Name" value="{{Sounds.firstName}}">
+</div>
+<div class="form-group">
+    <button type="submit" class="btn btn-info">Submit</button>
+    <a class="btn btn-secandary" href="/sounds/list">View All</a>
+</div>
+</form>
