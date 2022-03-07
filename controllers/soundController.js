@@ -41,7 +41,16 @@ function insertRecord(req, res) {
 }
 
 function updateRecord(req, res) {
-
+    console.log(req.body._id)
+    Sounds.findById(req.body._id, (err, doc) => {
+        fs.unlink(doc.sound, function(err){
+            doc.sound = req.file.path;
+            doc.save();
+            if(err) console.log(err);
+            console.log("Final db object: \n" + doc) 
+            console.log("Deletion from system succsessful")
+        })
+    });
 
     Sounds.findOneAndUpdate({_id: req.body._id}, req.body, {new: true}, (err, doc) => {
         if(!err){
