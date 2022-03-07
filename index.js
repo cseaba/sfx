@@ -8,7 +8,8 @@ const {
 } = require('@handlebars/allow-prototype-access');
 const bodyparser = require('body-parser');
 
-const studentController = require("./controllers/soundcontroller")
+
+const soundController = require(__dirname+ "/controllers/soundcontroller.js")
 
 var app = express();
 const port = 3000;
@@ -37,4 +38,4 @@ app.set("view engine", "hbs")
 app.listen(port, () => {
     console.log(`SFX app listening on port ${port}!`)
 })
-app.use("/sounds", studentController);
+app.use("/sounds", soundController);
