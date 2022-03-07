@@ -17,6 +17,10 @@ body {
   font-size: 500%;
 }
 
+.buttons {
+  padding-bottom: 5rem;
+}
+
 #container {
   display: flex;
   flex-flow: row wrap;
@@ -27,6 +31,7 @@ body {
   height: 70vh;
   justify-items: center;
 }
+
 .item {
   align-self: flex-start;
   text-align: center;
@@ -72,7 +77,7 @@ body {
   z-index: -1;
 }
 
-@media only screen and (max-height: 20em) {
+@media only screen and (max-height: 25em) {
   #title {
     font-size: xx-large;
   }

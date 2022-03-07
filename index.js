@@ -18,7 +18,7 @@ app.use(bodyparser.urlencoded({extended: false}));
 app.use(bodyparser.json());
 
 app.use(express.static(__dirname + '/Public/'));
-
+app.use('/Public/' , express.static(__dirname + '/Public/'));
 app.get ('/', (req, res) => {
     res.sendFile('/Public/sfx.html', { root: __dirname});
 })

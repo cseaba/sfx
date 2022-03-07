@@ -19,6 +19,7 @@
 
 
     <title>GOTTEM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
@@ -26,10 +27,9 @@
 <body>
 
     <main id="main">
-        <div id="title">
-            Sound Effects
-        </div>
-        <div id="container">
+        <h1 id="title">
+            Sound Effects </h1>
+        <div id="container" class="container-fluid">
             <div class="item" id="1">1</div>
             <div class="item" id="2">2</div>
             <div class="item" id="3">3</div>
@@ -41,11 +41,18 @@
             <div class="item" id="9">9</div>
             <div class="item" id="10">10</div>
             <div class="item" id="11">11</div>
-            <div class="item" id="12">12</div>
-
+            <div class="item" id="12">12</div>    
+            <p> Click here to get access to the <br> <a href="sounds/list"> database</a> <a id= "pg" >pg.1</a></p>
+            <div class="item" id="prev-pg" onclick="prevPage();">Prev pg</div>
+            <div class="item" id="next-pg" onclick="nextPage();">Next pg</div>
+            
         </div>
-        <h3> Click here to get access to the <br> <a href="sounds/list"> database</a></h3>
+       
     </main>
    
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/sfx.js"></script>
 </body>
