@@ -9,7 +9,7 @@ const {
 const bodyparser = require('body-parser');
 
 
-const soundController = require(__dirname+ "/controllers/soundcontroller.js")
+const soundController = require(__dirname+ "/controllers/soundController.js")
 
 var app = express();
 const port = 3000;
