@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/soundsDB', 
+mongoose.connect('mongodb+srv://calebseaba:tiger3404@cluster0.ip26s.mongodb.net/soundsDB?retryWrites=true&w=majority', 
 { 
 useNewUrlParser: true,
 },
