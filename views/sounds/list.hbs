@@ -4,14 +4,12 @@
     <thead>
         <tr>
             <th>Sound Name</th>
-            <th>First Name</th>
         </tr>
     </thead>
     <tbody>
        {{#each list}}
         <tr>
             <td>{{this.soundName}}</td>
-            <td>{{this.firstName}}</td>
             <td>
                 <a class="btn btn-primary btn-sm" href="/Sounds/{{this.id}}">Edit</a>
                 <a class="btn btn-primary btn-sm" href="/Sounds/delete/{{this.id}}" 

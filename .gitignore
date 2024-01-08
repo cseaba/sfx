@@ -1,4 +1,4 @@
 node_modules/
 mongoDB.pem
-public/Sound
-public/Sounds
+Public/Sound/
+Public/Sounds/

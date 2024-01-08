@@ -26,7 +26,6 @@ router.post('/', upload.single(form_element_name), (req, res) => {
 function insertRecord(req, res) {
     var csound = new Sounds();
     csound.soundName = req.body.soundName
-    csound.firstName = req.body.firstName
     
     csound.sound = req.file.path
     console.log(req.file.path)

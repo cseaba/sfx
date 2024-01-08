@@ -6,10 +6,6 @@ var soundsSchema = new mongoose.Schema({
         type: String,
         required: 'This field is required'
     },
-    firstName: {
-        type: String,
-        required: 'This field is required'
-    },
    sound: {
        type: String,
    },
