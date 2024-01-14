@@ -105,8 +105,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.get('/delete/:id', (req, res) => {
-    
+router.get('/delete/:id', (req, res) => { 
     Sounds.findById(req.params.id, (err, doc) => {
         fs.unlink(doc.sound, function(err){
             if(err) console.log(err);
@@ -119,6 +118,7 @@ router.get('/delete/:id', (req, res) => {
             
             
             res.render('sounds/list');
+		console.log(req.params);
         } else {
             console.log('Error in deletion: ' + err);
         }

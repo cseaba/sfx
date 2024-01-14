@@ -2,4 +2,3 @@ node_modules/
 mongoDB.pem
 Public/Sound/
 Public/Sounds/
-models/db.js
