@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
+require('dotenv').config() //This lets this file be stored on Github without showing password on github 
+
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://calebseaba:tiger3404@cluster0.ip26s.mongodb.net/soundsDB?retryWrites=true&w=majority', 
+mongoose.connect('mongodb+srv://calebseaba:'+ process.env.MONGODB_PASSWORD + '@cluster0.ip26s.mongodb.net/soundsDB?retryWrites=true&w=majority', 
 { 
 useNewUrlParser: true,
 },
