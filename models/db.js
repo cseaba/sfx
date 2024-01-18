@@ -15,3 +15,4 @@ useNewUrlParser: true,
 });
 
 require('./sounds.model');
+require('./user.model');

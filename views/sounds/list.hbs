@@ -21,8 +21,8 @@
             <td>{{this.soundName}}</td>
             <td>
                 <a class="btn btn-primary btn-sm" href="/Sounds/{{this.id}}">Edit</a>
-		<a class="btn btn-primary btn-sm"id= "/Sounds/delete/{{this.id}}" 
-		onClick="return test()" >   Delete</a>
+		<a class="btn btn-primary btn-sm" href= "/Sounds/delete/{{this.id}}" 
+		 onClick= "return confirm('Are you sure you want to delete?')"  >   Delete</a>
             </td>
         </tr>
        {{/each}}

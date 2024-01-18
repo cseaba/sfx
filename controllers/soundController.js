@@ -105,7 +105,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.get('/delete/:id', (req, res) => { 
+router.get('/delete/:id', checkAuthenticated, (req, res) => { 
     Sounds.findById(req.params.id, (err, doc) => {
         fs.unlink(doc.sound, function(err){
             if(err) console.log(err);
@@ -124,5 +124,12 @@ router.get('/delete/:id', (req, res) => {
         }
     })
 })
+
+function checkAuthenticated(req, res, next) { 
+	if(req.isAuthenticated()) {
+		return next()
+	}
+	res.redirect('/login')
+}
 
 module.exports = router;
