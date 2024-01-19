@@ -26,9 +26,18 @@ class Sound {
     container.appendChild(btn)
   }
   play() { 
+	  if(this.audio.currentTime != 0) {
+		  this.audio.muted = true;
+		  this.audio.pause();  
+		  this.audio.currentTime = 0;
+		  console.log('Ended sound: ' + this.name);
+		  return;
+	  }
+	  
+	 this.audio.muted = false;
+	  console.log('Playing sound: '+ this.name)
     this.audio.play();
     this.audio.currentTime = 0 ; 
-    console.log(this.name)
   }
   reset() {
    let btn = document.getElementById(this.button)
